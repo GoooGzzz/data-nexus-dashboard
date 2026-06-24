@@ -715,11 +715,12 @@ export default function DataNexusDashboard() {
   const [copilotOpen, setCopilotOpen] = useState(false);
 
   const navItems = [
-    { id: "dashboard",  icon: LayoutDashboard, label: "DASHBOARD" },
-    { id: "sales",      icon: BarChart3,        label: "SALES ANALYTICS" },
-    { id: "attendance", icon: Users,             label: "ATTENDANCE" },
-    { id: "dataBridge", icon: Database,          label: "DATA BRIDGE" },
-    { id: "settings",   icon: Settings,          label: "SETTINGS" },
+    { id: "dashboard",      icon: LayoutDashboard, label: "DASHBOARD" },
+    { id: "sales",          icon: BarChart3,        label: "SALES ANALYTICS" },
+    { id: "attendance",     icon: Users,             label: "ATTENDANCE" },
+    { id: "dataBridge",     icon: Database,          label: "DATA BRIDGE" },
+    { id: "importReports",  icon: Upload,            label: "IMPORT REPORTS" },
+    { id: "settings",       icon: Settings,          label: "SETTINGS" },
   ];
 
   const totalSellout = 187755;
@@ -800,11 +801,12 @@ export default function DataNexusDashboard() {
 
         {/* Content */}
         <div className="flex-1 overflow-auto bg-neutral-950">
-          {activeSection === "dashboard"  && <DashboardPage />}
-          {activeSection === "sales"      && <SalesPage />}
-          {activeSection === "attendance" && <AttendancePage />}
-          {activeSection === "dataBridge" && <DataBridgePage />}
-          {activeSection === "settings"   && <SettingsPage />}
+          {activeSection === "dashboard"      && <DashboardPage />}
+          {activeSection === "sales"          && <SalesPage />}
+          {activeSection === "attendance"     && <AttendancePage />}
+          {activeSection === "dataBridge"     && <DataBridgePage />}
+          {activeSection === "importReports"  && <ImportReportsPage />}
+          {activeSection === "settings"       && <SettingsPage />}
         </div>
       </div>
 

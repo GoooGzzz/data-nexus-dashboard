@@ -39,7 +39,7 @@ function formatTime(d: Date) {
 }
 
 // Tiny, dependency-free markdown: **bold**, `code`, and line breaks/bullets.
-// Groq replies often use these — rendering them keeps answers readable
+// Markdown rendering: **bold**, `code`, and line breaks/bullets
 // instead of dumping raw asterisks into the chat.
 function renderInline(text: string, keyPrefix: string) {
   const parts = text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g).filter(Boolean);
@@ -311,7 +311,7 @@ const NexusCopilot = forwardRef<NexusCopilotHandle, NexusCopilotProps>(function 
                   ...m,
                   isError: true,
                   content:
-                    "Nexus couldn't reach the intelligence engine just now. Check that GROQ_API_KEY is set and the /api/nexus route is deployed, then try again.",
+                    "Nexus couldn't reach the intelligence engine just now. The intelligence engine encountered an issue. Please try again.",
                 }
               : m
           )
